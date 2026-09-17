@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>30 anos do GEN · 55º Encontros Nietzsche</title>
+<meta name="description" content="55º Encontros Nietzsche — Nietzsche e seus duplos: destruição e criação. Edição comemorativa dos 30 anos do GEN, em São Paulo, Rio de Janeiro, Brasília, Recife e Toledo.">
+<link rel="icon" href="assets/brand/gen-selo-t.png">
+<style>
+  :root{
+    --bg:#FAF5EC; --panel:#FFFCF6; --panel-2:#F5EDDF;
+    --ink:#241B12; --muted:#7B6959;
+    --line:#E3D5C1; --line-soft:#EFE5D6;
+    --accent:#C2571C; --accent-ink:#9B4212; --accent-wash:#C2571C14;
+    --sepia:#8A6A3B; --shadow:0 1px 2px #241b1210, 0 8px 24px #241b120d;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14100C; --panel:#1D1711; --panel-2:#241D15;
+      --ink:#F2E7D7; --muted:#A5937E;
+      --line:#352A20; --line-soft:#2A2119;
+      --accent:#E68B4C; --accent-ink:#F2A469; --accent-wash:#E68B4C14;
+      --sepia:#C9A56A; --shadow:0 1px 2px #0006, 0 8px 24px #0004;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#14100C; --panel:#1D1711; --panel-2:#241D15;
+    --ink:#F2E7D7; --muted:#A5937E;
+    --line:#352A20; --line-soft:#2A2119;
+    --accent:#E68B4C; --accent-ink:#F2A469; --accent-wash:#E68B4C14;
+    --sepia:#C9A56A; --shadow:0 1px 2px #0006, 0 8px 24px #0004;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:16.5px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){ *{animation:none!important;transition:none!important} html{scroll-behavior:auto} }
+  img{max-width:100%}
+  a{color:var(--accent-ink); text-underline-offset:3px; text-decoration-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+  a:hover{text-decoration-color:var(--accent)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+
+  .wrap{max-width:1080px; margin:0 auto; padding:0 20px}
+  .serif{font-family:"Hoefler Text","Baskerville","Libre Baskerville",Georgia,"Times New Roman",serif}
+  .label{text-transform:uppercase; letter-spacing:.16em; font-size:.68rem; font-weight:700}
+  .muted{color:var(--muted)}
+
+  /* ── header ─────────────────────────────── */
+  header.site{position:sticky; top:0; z-index:60; background:color-mix(in srgb,var(--bg) 92%,transparent);
+    backdrop-filter:saturate(160%) blur(10px); border-bottom:1px solid var(--line)}
+  .hbar{display:flex; align-items:center; gap:14px; padding:10px 0}
+  .hbrand{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); flex:none}
+  .hbrand img{width:34px; height:34px; border-radius:50%; background:#F7F1E6; padding:2px; border:1px solid var(--line)}
+  .hbrand b{font-size:.92rem; letter-spacing:.02em; line-height:1.1; display:block}
+  .hbrand span{font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+  .hspace{flex:1}
+  .themebtn{font:inherit; cursor:pointer; background:transparent; border:1px solid var(--line); color:var(--muted);
+    width:34px; height:34px; border-radius:50%; display:grid; place-items:center; font-size:.9rem; flex:none}
+  .themebtn:hover{color:var(--ink); border-color:var(--muted)}
+  .menubtn{display:none}
+  nav.main{display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; border-top:1px solid var(--line-soft)}
+  nav.main::-webkit-scrollbar{display:none}
+  nav.main a{flex:none; padding:11px 12px 9px; color:var(--muted); text-decoration:none;
+    border-bottom:2px solid transparent; text-transform:uppercase; letter-spacing:.12em; font-size:.69rem; font-weight:700}
+  nav.main a:hover{color:var(--ink)}
+  nav.main a.on{color:var(--accent-ink); border-bottom-color:var(--accent)}
+
+  /* ── hero ───────────────────────────────── */
+  .hero{background:linear-gradient(118deg,#7A3410 0%,#C2571C 46%,#E3853F 100%); color:#FFF6EA; position:relative; overflow:hidden}
+  .hero::after{content:""; position:absolute; inset:0;
+    background:repeating-linear-gradient(126deg,#ffffff0a 0 2px,transparent 2px 46px); pointer-events:none}
+  .hero .wrap{position:relative; z-index:1; padding-top:38px; padding-bottom:34px}
+  .hero .mark{max-width:320px; width:62%; min-width:230px; display:block; margin:0 0 20px; filter:drop-shadow(0 3px 10px #00000030)}
+  .hero h1{font-weight:500; font-size:clamp(2rem,5.6vw,3.6rem); line-height:1.06; margin:0 0 10px; letter-spacing:.005em; text-wrap:balance}
+  .hero h1 em{font-style:italic}
+  .hero .kick{letter-spacing:.2em; color:#FFE2C4; margin-bottom:6px}
+  .hero .sub{color:#FFEBD8; max-width:56ch; margin:14px 0 0; font-size:1.02rem}
+  .hero .strip{display:flex; flex-wrap:wrap; gap:10px 28px; align-items:baseline; margin-top:24px; padding-top:18px; border-top:1px solid #ffffff38}
+  .hero .strip b{font-size:1.06rem}
+  .hero .strip .s{color:#FFE2C4; font-size:.86rem}
+
+  /* ── generic blocks ─────────────────────── */
+  main{padding:40px 0 70px; min-height:50vh}
+  .phead{margin:0 0 30px}
+  .phead .kick{color:var(--sepia); margin-bottom:8px}
+  .phead h2{font-weight:500; font-size:clamp(1.7rem,3.8vw,2.6rem); margin:0 0 8px; line-height:1.12; text-wrap:balance}
+  .phead .lede{color:var(--muted); max-width:66ch; margin:0}
+  .rule{height:4px; border-top:2px solid var(--accent); border-bottom:1px solid var(--line); margin:18px 0 0}
+  .prose{max-width:68ch}
+  .prose p{margin:0 0 1.1em}
+  .prose h3{font-weight:600; font-size:1.2rem; margin:2em 0 .5em}
+  .prose ul{padding-left:1.15em; margin:0 0 1.1em}
+  .prose li{margin:0 0 .45em}
+  h3.sec{font-weight:600; font-size:clamp(1.25rem,2.6vw,1.6rem); margin:0 0 6px}
+  .secrule{height:1px; background:var(--line); margin:10px 0 22px}
+
+  .btn{display:inline-flex; align-items:center; gap:7px; padding:9px 15px; border:1.5px solid var(--accent);
+    color:var(--accent-ink); text-decoration:none; text-transform:uppercase; letter-spacing:.11em;
+    font-size:.68rem; font-weight:700; border-radius:2px; background:transparent; cursor:pointer; font-family:inherit}
+  .btn:hover{background:var(--accent); color:#fff; border-color:var(--accent)}
+  .btn.solid{background:var(--accent); color:#fff}
+  .btn.solid:hover{background:var(--accent-ink); border-color:var(--accent-ink)}
+  .btn.ghost{border-color:var(--line); color:var(--muted)}
+  .btn.ghost:hover{border-color:var(--muted); background:transparent; color:var(--ink)}
+  .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin:1.3em 0}
+  .note{border-left:3px solid var(--accent); background:var(--accent-wash); padding:12px 16px; margin:1.3em 0; max-width:66ch; border-radius:0 3px 3px 0}
+
+  /* ── home ───────────────────────────────── */
+  .routebox{background:var(--panel); border:1px solid var(--line-soft); border-radius:4px; padding:18px; box-shadow:var(--shadow); margin:0 0 34px}
+  .routebox img{display:block; margin:0 auto; background:#fff; border-radius:3px}
+  .routebox figcaption{color:var(--muted); font-size:.82rem; text-align:center; margin-top:10px}
+  .citygrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:16px}
+  .ccard{background:var(--panel); border:1px solid var(--line-soft); border-radius:4px; overflow:hidden;
+    text-decoration:none; color:var(--ink); display:flex; flex-direction:column; box-shadow:var(--shadow);
+    transition:transform .16s ease, border-color .16s ease}
+  .ccard:hover{transform:translateY(-3px); border-color:var(--accent)}
+  .ccard img{display:block; width:100%; aspect-ratio:1024/1536; object-fit:cover}
+  .ccard .cb{padding:12px 14px 14px; border-top:1px solid var(--line-soft)}
+  .ccard .cn{font-weight:700; font-size:1.02rem; line-height:1.2}
+  .ccard .cd{color:var(--accent-ink); font-size:.8rem; font-weight:700; letter-spacing:.06em; margin-top:3px}
+  .ccard .cv{color:var(--muted); font-size:.78rem; margin-top:6px; line-height:1.4}
+
+  /* ── programação ────────────────────────── */
+  .tabs{display:flex; gap:8px; flex-wrap:wrap; margin:0 0 26px}
+  .tab{padding:8px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none; color:var(--muted);
+    font-size:.78rem; font-weight:700; letter-spacing:.04em; background:var(--panel)}
+  .tab:hover{color:var(--ink); border-color:var(--muted)}
+  .tab.on{background:var(--accent); border-color:var(--accent); color:#fff}
+  .cityhead{display:grid; grid-template-columns:230px 1fr; gap:26px; align-items:start; margin:0 0 34px}
+  @media (max-width:720px){ .cityhead{grid-template-columns:1fr} }
+  .cityhead .poster{border:1px solid var(--line); border-radius:4px; overflow:hidden; box-shadow:var(--shadow); cursor:zoom-in; background:var(--panel)}
+  .cityhead .poster img{display:block; width:100%}
+  .facts{list-style:none; padding:0; margin:14px 0 0}
+  .facts li{display:flex; gap:12px; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:.92rem}
+  .facts li .k{flex:none; width:92px; color:var(--sepia); text-transform:uppercase; letter-spacing:.12em; font-size:.66rem; font-weight:700; padding-top:3px}
+
+  .day{margin:0 0 46px}
+  .dayhead{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 4px}
+  .dayhead h4{font-weight:600; font-size:clamp(1.2rem,2.6vw,1.6rem); margin:0}
+  .dayhead .st{color:var(--accent-ink); font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase}
+  .dayrule{height:3px; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); margin:0 0 4px}
+  .sect{border-bottom:1px solid var(--line-soft); padding:16px 0}
+  .sect:last-child{border-bottom:0}
+  .sgrid{display:grid; grid-template-columns:96px 1fr; gap:18px}
+  @media (max-width:600px){ .sgrid{grid-template-columns:1fr; gap:4px} }
+  .stime{font-variant-numeric:tabular-nums; color:var(--muted); font-size:.78rem; font-weight:700; letter-spacing:.06em; padding-top:4px}
+  .stitle{font-weight:700; font-size:1.02rem; margin:0 0 2px}
+  .smeta{color:var(--muted); font-size:.84rem; margin:0 0 8px}
+  .items{list-style:none; padding:0; margin:8px 0 0; display:grid; gap:10px}
+  .item{background:var(--panel); border:1px solid var(--line-soft); border-left:3px solid var(--accent);
+    border-radius:0 3px 3px 0; padding:10px 14px}
+  .item .t{font-variant-numeric:tabular-nums; color:var(--accent-ink); font-size:.72rem; font-weight:700; letter-spacing:.08em; display:block; margin-bottom:2px}
+  .item .w{font-weight:700}
+  .item .a{color:var(--muted); font-weight:400; font-size:.9em}
+  .item .ti{margin-top:2px; font-size:.96rem}
+  .item .ti i{font-style:italic}
+  .sect.plain .item{border-left-color:var(--sepia)}
+  .item.bare{background:transparent; border:0; border-left:3px solid var(--line); padding:4px 0 4px 14px}
+  .item.bare .w{font-weight:600; color:var(--muted); font-size:.92rem}
+  .sect.break{color:var(--muted); font-style:italic}
+  .names{margin:6px 0 0; font-size:.96rem}
+  .names b{font-weight:700}
+
+  .postergrid{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:16px; margin:16px 0 34px}
+  .pcard{background:var(--panel); border:1px solid var(--line-soft); border-radius:4px; overflow:hidden; box-shadow:var(--shadow)}
+  .pcard img{display:block; width:100%; cursor:zoom-in}
+  .pcard .pb{padding:10px 12px; display:flex; justify-content:space-between; align-items:center; gap:10px; border-top:1px solid var(--line-soft)}
+  .pcard .pl{font-size:.8rem; font-weight:700}
+  .pcard a.dl{font-size:.66rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; text-decoration:none; color:var(--muted); white-space:nowrap}
+  .pcard a.dl:hover{color:var(--accent-ink)}
+
+  /* ── livros ─────────────────────────────── */
+  .book{display:grid; grid-template-columns:168px 1fr; gap:26px; padding:26px 0; border-bottom:1px solid var(--line-soft); align-items:start}
+  @media (max-width:640px){ .book{grid-template-columns:1fr; gap:16px} .book .cover{max-width:180px} }
+  .book .cover{border:1px solid var(--line); border-radius:3px; overflow:hidden; box-shadow:var(--shadow); cursor:zoom-in; background:var(--panel)}
+  .book .cover img{display:block; width:100%}
+  .book h4{font-weight:600; font-size:1.22rem; margin:0 0 4px; line-height:1.25}
+  .book .by{font-weight:700; font-size:.94rem}
+  .book .pub{color:var(--sepia); font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; font-weight:700; margin:6px 0 12px}
+  .book p{margin:0 0 .9em; font-size:.97rem}
+  .book blockquote{margin:1em 0 0; padding:10px 0 10px 16px; border-left:3px solid var(--sepia); color:var(--muted); font-style:italic; font-size:.95rem}
+  .book blockquote cite{display:block; font-style:normal; font-weight:700; font-size:.82rem; color:var(--ink); margin-top:8px}
+  .simple{list-style:none; padding:0; margin:.6em 0 0}
+  .simple li{padding:11px 0; border-bottom:1px solid var(--line-soft)}
+  .simple li i{font-style:italic}
+  .simple li span{display:block; color:var(--muted); font-size:.85rem; margin-top:2px}
+
+  /* ── núcleos / chips ────────────────────── */
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin:.8em 0 0}
+  .chip{border:1px solid var(--line); background:var(--panel); border-radius:999px; padding:6px 14px; font-size:.8rem; font-weight:700; letter-spacing:.03em}
+  .cols2{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  @media (max-width:720px){ .cols2{grid-template-columns:1fr} }
+  .card{background:var(--panel); border:1px solid var(--line-soft); border-radius:4px; padding:20px 22px; box-shadow:var(--shadow)}
+  .card .label{color:var(--sepia); margin-bottom:8px}
+  .card p{margin:.25em 0}
+  .qr{background:#fff; border:1px solid var(--line); border-radius:4px; padding:10px; width:max-content}
+  .qr img{display:block; width:170px; height:170px}
+
+  /* ── lightbox ───────────────────────────── */
+  #lb{position:fixed; inset:0; z-index:200; background:#120c08f2; display:none; align-items:center; justify-content:center; padding:24px}
+  #lb.on{display:flex}
+  #lb img{max-width:100%; max-height:calc(100vh - 110px); border-radius:3px; box-shadow:0 20px 60px #0008}
+  #lb .cl{position:absolute; top:14px; right:18px; background:transparent; border:1px solid #ffffff55; color:#fff;
+    width:40px; height:40px; border-radius:50%; font-size:1.2rem; cursor:pointer; font-family:inherit}
+  #lb .cl:hover{background:#ffffff1a}
+  #lb .cap{position:absolute; bottom:18px; left:0; right:0; text-align:center; color:#F5E4D2; font-size:.82rem}
+
+  /* ── footer ─────────────────────────────── */
+  footer.site{border-top:1px solid var(--line); background:var(--panel-2); padding:34px 0 40px; color:var(--muted); font-size:.9rem}
+  footer.site .fg{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:28px}
+  @media (max-width:720px){ footer.site .fg{grid-template-columns:1fr} }
+  footer.site .label{color:var(--sepia); display:block; margin-bottom:10px}
+  footer.site ul{list-style:none; margin:0; padding:0}
+  footer.site li{margin:0 0 7px}
+  footer.site a{text-decoration:none}
+  footer.site a:hover{text-decoration:underline}
+  footer.site .sig{background:#F7F1E6; border:1px solid var(--line); border-radius:3px; padding:10px 14px; width:max-content; margin-bottom:14px}
+  footer.site .sig img{display:block; width:190px}
+  .cred{margin-top:26px; padding-top:14px; border-top:1px solid var(--line); font-size:.78rem}
+
+  @media print{
+    header.site,footer.site,#lb,.btnrow,.tabs,.themebtn{display:none!important}
+    body{background:#fff;color:#000;font-size:11pt}
+    .item{break-inside:avoid; border-left-color:#999}
+    .day{break-inside:auto}
+    a{color:#000;text-decoration:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="hbar">
+      <a class="hbrand" href="#/">
+        <img src="assets/brand/gen-selo-t.png" alt="">
+        <span style="display:block"><b>30 anos do GEN</b><span>55º Encontros Nietzsche</span></span>
+      </a>
+      <div class="hspace"></div>
+      <button class="themebtn" id="theme" type="button" title="Alternar tema" aria-label="Alternar tema">◐</button>
+    </div>
+    <nav class="main" id="nav" aria-label="Principal"></nav>
+  </div>
+</header>
+
+<div id="hero"></div>
+<main><div class="wrap" id="app"></div></main>
+<footer class="site"><div class="wrap" id="foot"></div></footer>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+  <button class="cl" type="button" id="lbclose" aria-label="Fechar">✕</button>
+  <img id="lbimg" src="" alt="">
+  <div class="cap" id="lbcap"></div>
+</div>
+
+<script>
+/* ═══════════════════════ dados do evento ═══════════════════════ */
+
+const EVENTO = {
+  edicao: "55º Encontros Nietzsche",
+  tema: "Nietzsche e seus duplos: destruição e criação",
+  marco: "30 anos do GEN — Grupo de Estudos Nietzsche",
+  periodo: "21 de setembro a 2 de outubro de 2026",
+  sitePrincipal: "https://gen-grupodeestudosnietzsche.net/",
+  anteriores: "https://gen-grupodeestudosnietzsche.net/encontros-nietzsche/",
+  cadernos: "https://gen-grupodeestudosnietzsche.net/cadernos-nietzsche/",
+  uspEvento: "https://filosofia.fflch.usp.br/eventos/12422"
+};
+
+const SOBRE = {
+  gen: [
+    "O GEN – Grupo de Estudos Nietzsche é um grupo de pesquisa internacional, que reúne estudiosos brasileiros e europeus da filosofia nietzschiana. Fundado por Scarlett Marton em 1996, o GEN esteve, de início, ligado ao Departamento de Filosofia da Universidade de São Paulo. Hoje presente em todo o Brasil, do Ceará ao Rio Grande do Sul, continua a perseguir o propósito de fazer avançar as investigações acerca do pensamento nietzschiano e julga que, para tanto, é essencial promover a discussão acerca das mais variadas interpretações dos textos do filósofo.",
+    "Empreendimento pioneiro na América do Sul, o GEN procura não apenas incentivar os estudos nietzschianos entre nós como dialogar com as diversas Nietzsche Societies e Centros de pesquisa internacionais. Atuando em três frentes distintas, o GEN organiza suas atividades em torno dos <i>Cadernos Nietzsche</i>, da Coleção <i>Sendas &amp; Veredas</i> e dos <i>Encontros Nietzsche</i>."
+  ],
+  nucleos: ["GEN/USP","GEN Unirio","GEN UnB","GEN/RECIFE","GEN/UFPE","GEN/UNIFESP","GEN/UFABC","GEN/UFSB","GEN/UNIOESTE","GEN/UFPel","GEN/UFRB/UFBA"],
+  encontros: [
+    "Os Encontros Nietzsche consistem num fórum permanente de debates acerca da filosofia nietzschiana. Promovidos pelo GEN, recebem seus parceiros intelectuais, tanto da cena acadêmica nacional como internacional. Ocorrendo sempre nos meses de maio e setembro, é também a ocasião em que o GEN apresenta suas publicações, lançando os novos números dos <i>Cadernos Nietzsche</i> e os novos títulos da coleção <i>Sendas &amp; Veredas</i>. Tendo lugar nos mais diversos estados do território nacional, procuram concorrer desde 1996 para a difusão da pesquisa sobre o pensamento de Nietzsche no Brasil.",
+    "Em 2026, a realização da 55ª edição dos Encontros Nietzsche, intitulada <i>Nietzsche e seus duplos: destruição e criação</i>, marca os trinta anos do GEN, celebrando sua trajetória e sua importância para a consolidação dos estudos nietzschianos no país. Nesta edição comemorativa, o evento será realizado nas cidades de São Paulo, Rio de Janeiro, Brasília, Recife e Toledo."
+  ]
+};
+
+/* ── São Paulo ─────────────────────────────────────────────── */
+const SP = {
+  slug:"sao-paulo", nome:"São Paulo", uf:"SP",
+  datas:"21, 22 e 23 de setembro", datasCurto:"21–23/09",
+  local:"Sala 14 — FFLCH/USP",
+  endereco:"Av. Prof. Luciano Gualberto, 315 — Cidade Universitária, São Paulo",
+  inicio:"Conferências às 14h · Comunicações às 9h",
+  realizacao:"USP · UNIFESP · FFLCH · PPG-FIL",
+  cartaz:"cartaz-sao-paulo",
+  links:[["Página do evento na FFLCH/USP", EVENTO.uspEvento]],
+  qr:{img:"assets/brand/qr-ouvintes-sp.png", t:"Inscrições para ouvintes — São Paulo"},
+  cartazes:[
+    ["prog-sp-21-09","Programação · 21/09"],
+    ["prog-sp-22-09","Programação · 22/09"],
+    ["prog-sp-comunicacoes","Comunicações · 21, 22 e 23/09"]
+  ],
+  dias:[
+    { id:"sp-21", titulo:"21 de setembro", st:"Início às 14h", sects:[
+      { t:"14h", h:"Abertura", names:"<b>Eduardo Brandão</b> (USP) · <b>Vânia Dutra de Azeredo</b> (GEN/UNIRIO) · <b>Eder Corbanezi</b> (GEN/UNESP)" },
+      { t:"14h15", h:"Conferências", items:[
+        {w:"Vânia Dutra de Azeredo", a:"GEN/UNIRIO", ti:"A leitura como canto paralelo."},
+        {w:"André Luís Mota Itaparica", a:"GEN/UFRB", ti:"Nietzsche ou MacIntyre?"},
+        {w:"Damião Duque de Farias", a:"UFGD", ti:"Senso/sentido histórico: a crítica de Nietzsche à historiografia do século XIX."},
+        {w:"Eduardo Nasser", a:"GEN/UFPE/UFABC", ti:"Linguística e literatura comparada: diferentes imagens da dimensão pulsional em Nietzsche."}
+      ]},
+      { t:"16h15", h:"Conferências", items:[
+        {w:"Francisco Augusto de Moraes Prata Gaspar", a:"UFSCar", ti:"Cultura como unidade de estilo – um tema romântico?"},
+        {w:"Márcio Benchimol Barros", a:"UNESP", ti:"Moral e política na Genealogia de Nietzsche."},
+        {w:"Eder Corbanezi", a:"GEN/UNESP", ti:"Filosofia e ciência ante o problema do valor na <i>Genealogia da moral</i>: solução ou dissolução da filosofia?"}
+      ]},
+      { t:"18h", h:"Exibição do filme", m:"“As primeiras viagens alpinas de Nietzsche na Suíça”, de Fabien Jégoudez.", plain:true },
+      { t:"19h30", h:"Conferências", items:[
+        {w:"Blaise Benoit", a:"GEN/Université de Nantes", ti:"Nietzsche: penseur de la justice?"},
+        {w:"Ivo da Silva Jr.", a:"GEN/UNIFESP", ti:"Nietzsche, dessecularização e reencantamento."},
+        {w:"Emmanuel Salanskis", a:"GEN/Université de Strasbourg", ti:"Pour une lecture foucaldienne de Nietzsche"}
+      ]}
+    ]},
+    { id:"sp-22", titulo:"22 de setembro", st:"Início às 14h", sects:[
+      { t:"14h", h:"Conferências", items:[
+        {w:"João Evangelista Tude de Melo Neto", a:"GEN/UFRPE/UFPE", ti:"A afirmação dionisíaca em “O canto do ébrio” de <i>Assim falava Zaratustra</i>."},
+        {w:"Márcio José Silveira Lima", a:"GEN/UFSB", ti:"Nietzsche e a música do futuro."},
+        {w:"Célia Benvenho", a:"GEN/UNIOESTE", ti:"A comunicação do eterno retorno em <i>Zaratustra</i>."}
+      ]},
+      { t:"16h", h:"Conferências", items:[
+        {w:"Stefano Busellato", a:"GEN/UNIOESTE", ti:"Zarathustra e il linguaggio poetico"},
+        {w:"Wilson Antonio Frezzatti Jr.", a:"GEN/UNIOESTE", ti:"A ciência em <i>Assim falava Zaratustra</i>."},
+        {w:"Alexander Gonçalves", a:"GEN/UENP/PGF-UEM", ti:"Humanidade e animalidade em <i>Assim falava Zaratustra</i>."},
+        {w:"Luis Rubira", a:"GEN/UFPEL", ti:"Zaratustra: uma obra em três partes. Argumentos para publicar a “quarta parte” em livro separado."}
+      ]},
+      { t:"18h", h:"Lançamentos", m:"Lançamento dos livros da edição — veja a página <a href=\"#/lancamentos\">Lançamentos</a>.", plain:true },
+      { t:"19h30", h:"Conferências", items:[
+        {w:"Katharina Grätz", a:"Universität Freiburg", ti:"Quem é, para nós, Zaratustra? O jogo de Nietzsche com papéis, máscaras e identidades."},
+        {w:"Fernando R. de Moraes Barros", a:"GEN/UnB", ti:"O Grande meio-dia das imagens-sentido: traduzindo “Assim falava Zaratustra”."},
+        {w:"Scarlett Marton", a:"GEN/USP", ti:"A águia e a serpente, animais de Zaratustra."}
+      ]}
+    ]},
+    { id:"sp-com", titulo:"Comunicações", st:"21 e 22/09 presencial · 23/09 remoto", sects:[
+      { t:"21/09", h:"Formato presencial", m:"A partir das 9h", items:[
+        {w:"Arlison Frank Lisboa Alves", a:"GEN/UNIFESP", ti:"A função da luta no Estado Grego para a crítica do Estado moderno."},
+        {w:"Gabriela Marchiori", a:"GEN/UNIFESP", ti:"Nietzsche: necessidades e cultivos."},
+        {w:"Gabriela Borges Casé de Vasconcelos", a:"GEN/UFPE", ti:"Nietzsche e Lou Andreas-Salomé: a afirmação da vida como intercâmbio filosófico."},
+        {w:"Leovan Rodrigues", a:"GEN/UNIFESP", ti:"Atividade maquinal como prática ascética sacerdotal."},
+        {w:"Paulo Sérgio Alves de Souza Filho", a:"GEN/UFPE", ti:"A fisiologia como princípio da transvaloração de todos os valores."}
+      ]},
+      { t:"22/09", h:"Formato presencial", m:"A partir das 9h", items:[
+        {w:"André Pereira da Silva", a:"GEN/UnB", ti:"Ilusão e conhecimento em sentido extra-moral."},
+        {w:"Cassiano Lucas Silva Carvalho", a:"GEN/UNIOESTE", ti:"Do ciclo de Empédocles a Zaratustra: afirmação trágica e eterno retorno em Nietzsche."},
+        {w:"José Roberto Carvalho da Silva", a:"GEN/UFPE", ti:"O que é a mais elevada virtude? Uma leitura de “Da virtude que dá” à luz de “Das paixões alegres e dolorosas”."},
+        {w:"Jorge Waquim Neto", a:"GEN/UFPE", ti:"O acaso que ferve na panela de Zaratustra: uma releitura matemática do Eterno Retorno."},
+        {w:"Thiago Kistenmacher", a:"GEN/USP", ti:"O Eurípides nietzschiano: do socratismo de Medeia à palinódia d’<i>As Bacantes</i>."}
+      ]},
+      { t:"23/09", h:"Formato remoto · 10h", items:[
+        {w:"Erica Costa Sousa", a:"GEN/UFBA", ti:"Nietzsche: o egoísmo como criação e afirmação de si."},
+        {w:"Rafael da Silva Oliva", a:"GEN/UNIOESTE", ti:"Ascetismo em Nietzsche."},
+        {w:"Welington Sá", a:"GEN/UEM", ti:"O otimismo de Nietzsche em tempos decadentes."},
+        {w:"Paulo Rogério da Rosa Corrêa", a:"GEN/UFPel", ti:"Zaratustra e o caminho para si mesmo."},
+        {w:"Fabio Gabriel Semençato", a:"GEN/UNIOESTE", ti:"Sobre a <i>décadence</i> no mundo como vontade e representação: uma projeção do martelo nietzschiano à filosofia de Schopenhauer."}
+      ]},
+      { t:"23/09", h:"Formato remoto · 14h", items:[
+        {w:"João Victor Rodrigues Pinto", a:"GEN/UEM", ti:"Do adoecimento da Vontade à ascensão da racionalidade na cultura grega."},
+        {w:"Leonardo Magalde Ferreira", a:"GEN/UFABC", ti:"O fragmento 12[1] como prenúncio do giro retórico no jovem Nietzsche."},
+        {w:"José Carlos Silva Rocha Costa", a:"GEN/UFBA", ti:"Perspectivismo e o problema da consciência em Nietzsche."},
+        {w:"Sakura Maria", a:"GEN/UFPE", ti:"Mulher e transvaloração dos valores: uma incongruência."}
+      ]},
+      { t:"23/09", h:"Formato remoto · 16h", items:[
+        {w:"Luiz Felipe Xavier Gonçalves", a:"GEN/UNIFESP/IFAM", ti:"O <i>Übermensch</i> à brasileira de Almáquio Diniz."},
+        {w:"Tiago Lemes Pantuzzi", a:"GEN/IFSP", ti:"Nietzsche e a família Oiticica."},
+        {w:"Alécio de Andrade Silva", a:"GEN/UFPE", ti:"Nietzsche e a História da Filosofia do Brasil."},
+        {w:"Clauzer Antonio Silveira de Toledo", a:"UFGD", ti:"A recepção da filosofia de Nietzsche por Oswald de Andrade na primeira fase antropofágica (1928-1929)."},
+        {w:"Isabel Cristina Jeronymo de Toledo", a:"UFGD", ti:"Assim falou Emília: a recepção da filosofia de Nietzsche no Sítio do Picapau Amarelo de Monteiro Lobato (1920-1944)."}
+      ]}
+    ]}
+  ]
+};
+
+/* ── Rio de Janeiro ────────────────────────────────────────── */
+const RJ = {
+  slug:"rio-de-janeiro", nome:"Rio de Janeiro", uf:"RJ",
+  datas:"24 e 25 de setembro", datasCurto:"24–25/09",
+  local:"UNIRIO — Auditório Tércio Pacitti",
+  endereco:"Av. Pasteur, 458, prédio do CCET — Urca, Rio de Janeiro",
+  inicio:"24/09 às 15h30 · 25/09 às 9h",
+  realizacao:"UNIRIO · UNIFESP",
+  cartaz:"cartaz-rio-de-janeiro",
+  links:[],
+  cartazes:[["prog-rio-24-09","Programação · 24/09"],["prog-rio-25-09","Programação · 25/09"]],
+  dias:[
+    { id:"rj-24", titulo:"24 de setembro", st:"Início às 15h30", sects:[
+      { t:"15h30", h:"Mesa de abertura", names:"<b>Nilton dos Anjos</b> (UNIRIO) · <b>Vânia Dutra de Azeredo</b> (GEN/UNIRIO) · <b>Eder Corbanezi</b> (GEN/UNESP)" },
+      { t:"16h", h:"Conferências", m:"Mediação: Vânia Dutra de Azeredo", items:[
+        {w:"Blaise Benoit", a:"GEN/Université de Nantes", ti:"Nietzsche: penseur de la justice?"},
+        {w:"Ivo da Silva Jr.", a:"GEN/UNIFESP", ti:"Nietzsche, dessecularização e reencantamento."},
+        {w:"Emmanuel Salanskis", a:"GEN/Université de Strasbourg", ti:"Por uma leitura foucaultiana de Nietzsche"}
+      ]},
+      { t:"19h", h:"Conferências", m:"Mediação: Fernando R. de Moraes Barros", items:[
+        {w:"Katharina Grätz", a:"Universität Freiburg", ti:"Quem é, para nós, Zaratustra? O jogo de Nietzsche com papéis, máscaras e identidades."},
+        {w:"Scarlett Marton", a:"GEN/USP", ti:"“Todo vir-a-ser quer comigo aprender a falar”. A nova linguagem de Zaratustra."}
+      ]}
+    ]},
+    { id:"rj-25", titulo:"25 de setembro", st:"Início às 9h", sects:[
+      { t:"9h", h:"Conferências", m:"Mediação: Caio Picarelli", items:[
+        {w:"Marcelo José das Neves", a:"IAB/UFF", ti:"Animal Capaz de Prometer: Genealogia, Direito e Justiça em Nietzsche."},
+        {w:"Gabriela Marchiori", a:"GEN/UNIFESP", ti:"O espírito livre e a doutrina da completa irresponsabilidade."}
+      ]},
+      { t:"", h:"Conferências", m:"Mediação: Gabriela Marchiori", items:[
+        {w:"Caio Picarelli", a:"GEN/UNIRIO", ti:"O dionisíaco em Nietzsche como pulsão de vida e criação em Dança."},
+        {w:"Wagner Reis", a:"GEN/UNIRIO", ti:"A crítica de Nietzsche à moral da compaixão em <i>Genealogia da moral</i>."}
+      ]},
+      { t:"14h30", h:"Conferências", m:"Mediação: Eder Corbanezi", items:[
+        {w:"Vânia Dutra de Azeredo", a:"GEN/UNIRIO", ti:"A tradução como transcriação em Haroldo de Campos."},
+        {w:"Fernando R. de Moraes Barros", a:"GEN/UnB", ti:"A tradução de <i>Assim falava Zaratustra</i>."},
+        {w:"Martha Solange Perrusi", a:"UNICAP", ti:"Filosofia como Retórica."}
+      ]},
+      { t:"16h30", h:"Conferências", m:"Mediação: Ivo da Silva Jr.", items:[
+        {w:"Luis Rubira", a:"GEN/UFPEL", ti:"Por que Nietzsche compreendeu <i>O Anticristo</i> como totalidade da tarefa de transvaloração de todos os valores?"},
+        {w:"Eder Corbanezi", a:"GEN/UNESP", ti:"O conceito de justiça na filosofia de Nietzsche."}
+      ]},
+      { t:"18h30", h:"Exibição do filme", m:"<i>Paisagens de Nietzsche na Alta Engadina</i> — um filme de Fabien Jégoudez.", plain:true },
+      { t:"19h30", h:"Lançamentos de livros e do Cadernos Nietzsche", m:"Veja a página <a href=\"#/lancamentos\">Lançamentos</a>.", plain:true }
+    ]}
+  ]
+};
+
+/* ── Brasília ──────────────────────────────────────────────── */
+const BSB = {
+  slug:"brasilia", nome:"Brasília", uf:"DF",
+  datas:"28 de setembro", datasCurto:"28/09",
+  local:"UnB — Auditório Módulo 24, ICC/Norte",
+  endereco:"Campus Darcy Ribeiro — Brasília",
+  inicio:"Início às 10h",
+  realizacao:"UnB · FIL/UnB · Livraria Circulares · DAAD",
+  cartaz:"cartaz-brasilia",
+  links:[],
+  cartazes:[["prog-brasilia-28-09","Programação · 28/09"]],
+  dias:[
+    { id:"bsb-28", titulo:"28 de setembro", st:"Início às 10h", sects:[
+      { t:"10h–12h", h:"Mesa 1", m:"Moderador: Fernando Barros (UnB)", items:[
+        {w:"André Pereira da Silva", a:"Mestrado – UnB", ti:"Os poderes da metáfora, a palavra como mediação entre a intuição e o conceito."},
+        {w:"Wolfgang Theis", a:"Doutorado – UnB", ti:"Cuidado com os intelectuais: Nietzsche e os professores."},
+        {w:"Abraão Lincoln Ferreira Costa", a:"Pós-doutorado – UnB", ti:"Nietzsche e Fritz K. Ringer: possíveis semelhanças entre os filisteus da cultura e os mandarins alemães."}
+      ]},
+      { t:"13h30–15h", h:"Mesa 2", m:"Moderador: Fernando Barros (UnB)", items:[
+        {w:"André Muniz", a:"UnB", ti:"Zaratustra decadente: sobre um motivo modernista na prosa de Nietzsche."},
+        {w:"Emmanuel Salanskis", a:"Université de Strasbourg", ti:"A morte de Deus e a morte do homem em <i>Assim falou Zaratustra</i>: uma leitura foucaultiana."}
+      ]},
+      { t:"15h30–17h30", h:"Mesa 3", m:"Moderador: Alexandre Hahn (UnB)", items:[
+        {w:"Fernando Barros", a:"UnB", ti:"Grande meio-dia das imagens-sentido: os desafios em traduzir “Assim falava Zaratustra”."},
+        {w:"Katharina Grätz", a:"Uni-Freiburg", ti:"„Wer ist uns Zarathustra?“ Nietzsches Spiel mit Rollen, Masken und Identitäten [“Quem é Zaratustra para nós”. O jogo de Nietzsche com papéis, máscaras e identidades]."},
+        {w:"Scarlett Marton", a:"UnB", ti:"“Assim falava Zaratustra”, a obra ao mesmo tempo consagrada e renegada."}
+      ]},
+      { t:"18h", h:"Lançamento dos livros", m:"Livraria Circulares — 714/715 Norte, Bloco H, Brasília.", items:[
+        {w:"Scarlett Marton", ti:"<i>Nietzsche e a obra por fazer: Zaratustra</i>"},
+        {w:"Friedrich Nietzsche", ti:"<i>Assim falava Zaratustra</i> (trad. Fernando Barros)"}
+      ]}
+    ]}
+  ]
+};
+
+/* ── Recife ────────────────────────────────────────────────── */
+const REC = {
+  slug:"recife", nome:"Recife", uf:"PE",
+  datas:"29 e 30 de setembro", datasCurto:"29–30/09",
+  local:"UNICAP — Auditório Dom Helder Camara",
+  endereco:"Universidade Católica de Pernambuco — Recife",
+  inicio:"29/09 às 14h · 30/09 às 9h30",
+  realizacao:"UNICAP · UFPE · UFRPE · PPGFil · PPGCS · Livraria Vozes",
+  cartaz:"cartaz-recife",
+  links:[],
+  cartazes:[["prog-recife-29-09","Programação · 29/09"],["prog-recife-30-09","Programação · 30/09"]],
+  dias:[
+    { id:"rec-29", titulo:"29 de setembro", st:"Início às 14h", sects:[
+      { t:"14h", h:"Mesa de abertura", names:"<b>Profa. Dra. Flávia Tavares da Costa Ramos</b> (UNICAP) · <b>Profa. Dra. Eleonoura Enoque da Silva</b> (UNICAP) · <b>Prof. Dr. Degislando Nóbrega de Lima</b> (UNICAP)" },
+      { t:"14h15", h:"Mesa 1 — Jovem Nietzsche", m:"Mediação: Claudio Lucas", items:[
+        {t:"14h15", w:"Pedro Matos", a:"Mestrando – UNICAP", ti:"Perspectivismo e linguagem — pragmática ou semântica?"},
+        {t:"14h35", w:"Guilherme Nogueira", a:"Doutorando – UFPE", ti:"A Constituição do Conceito de Filosofia em Nietzsche: da Crítica Filológica à Justificação Estética da Existência."},
+        {t:"14h55", w:"Itallo Menezes", a:"Mestrando – UFPE/GEN", ti:"Da educação estética à justificação da existência: a influência de Schiller na formação da filosofia de Nietzsche."},
+        {t:"15h15", w:"Questões"}
+      ]},
+      { t:"15h40", h:"Mesa 2 — Problemas da contemporaneidade", m:"Mediação: Paulo Souza", items:[
+        {t:"15h40", w:"Roberta Liana Damasceno", a:"Profa. Dra. – UFPE", ti:"A Genealogia da Dívida: da leitura moral de Nietzsche à subjetividade endividada no neoliberalismo."},
+        {t:"16h", w:"Sakura Maria", a:"Mestranda – UFPE/GEN", ti:"Os fundamentos da crítica nietzscheana ao movimento de emancipação feminina em <i>Para Além de Bem e Mal</i>."},
+        {t:"16h20", w:"Leovan Neto", a:"Doutorando – UNIFESP/GEN", ti:"A Grande Política como condição de possibilidade da efetivação da Transvaloração de todos os valores."},
+        {t:"16h40", w:"Questões"}
+      ]},
+      { t:"16h55", h:"Mesa 3 — Assim falava Zaratustra", m:"Mediação: Sakura Maria", items:[
+        {t:"16h55", w:"Roberto Carvalho", a:"Doutorando – UFPE/GEN", ti:"O poder do símbolo (<i>Gleichnisse</i>) no <i>Zaratustra</i>: as paixões que se transformam em virtudes."},
+        {t:"17h15", w:"Jorge Waquim", a:"Mestre – UFPE/GEN", ti:"O acaso que ferve na panela de Zaratustra: uma releitura matemática do Eterno Retorno."},
+        {t:"17h35", w:"Robson Cordeiro", a:"Prof. Dr. – UFPB", ti:"O Eterno Retorno no discurso “O Convalescente”."},
+        {t:"17h55", w:"Paulo Souza", a:"Mestrando – UFPE/GEN", ti:"A análise fisiopsicológica em direção ao eterno retorno do mesmo."},
+        {t:"18h15", w:"Questões"}
+      ]},
+      { t:"", h:"Pausa (50 min)", plain:true, brk:true },
+      { t:"19h15", h:"Mesa 4 — Interlocuções e interpretações", m:"Mediação: Itallo Menezes", items:[
+        {t:"19h15", w:"Claudio Lucas", a:"Mestrando – UFPE/GEN/NEFA", ti:"O Átomo de Eternidade: a síntese de Jaspers entre o Salto (<i>Sprung</i>) de Kierkegaard e a Profundidade Atemporal de Nietzsche."},
+        {t:"19h35", w:"Diogo Villas Boas Aguiar", a:"Prof. Dr. – UNICAP", ti:"O ouvir do olhar? As vozes de Nietzsche e Levinas."},
+        {t:"19h55", w:"Pablo Ravel", a:"Mestre – UFPE/GEN", ti:"Nietzsche, Dostoiévski e o niilismo da civilização judaico-cristã: uma leitura do romance <i>Os Demônios</i> à luz do pensamento nietzschiano."},
+        {t:"20h15", w:"Questões"}
+      ]}
+    ]},
+    { id:"rec-30", titulo:"30 de setembro", st:"Início às 9h30", sects:[
+      { t:"9h30", h:"Mesa 5 — Interlocuções e interpretações", m:"Mediação: Jorge Waquim", items:[
+        {t:"9h30", w:"José Maria da Silva Filho", a:"Prof. Me. – UNICAP", ti:"Wittgenstein e Nietzsche: aproximações entre a metafísica, linguagem e método filosófico."},
+        {t:"9h50", w:"Alécio de Andrade", a:"Doutorando – UFPE", ti:"Problemas de filosofia brasileira: uma perspectiva genealógica."},
+        {t:"10h10", w:"Gabriela Casé", a:"Mestranda – UFPE/GEN", ti:"Nietzsche em suas obras: Lou Salomé como leitora de Nietzsche."},
+        {t:"10h30", w:"Geraldo Dias", a:"Prof. Dr. – IFSertãoPE/GEN", ti:"A especialização do léxico brasileiro de Nietzsche."},
+        {t:"10h50", w:"Questões"}
+      ]},
+      { t:"", h:"Pausa (3h10)", plain:true, brk:true },
+      { t:"14h20", h:"Mesa de Lançamentos", m:"Mediação: Tales Macedo", items:[
+        {t:"14h20", w:"Profa. Dra. Vânia Dutra de Azeredo", a:"UNIRIO/GEN", ti:"Entre o silêncio e a palavra: a questão do estilo em Nietzsche."},
+        {t:"14h40", w:"Profa. Dra. Martha Solange Perrusi", a:"UNICAP/GEN", ti:"Filosofia, a arte da transfiguração."},
+        {t:"15h", w:"Prof. Dr. João Evangelista Tude de Melo Neto", a:"UFRPE/UFPE/GEN", ti:"Nietzsche: o último discípulo do filósofo Dioniso."},
+        {t:"15h20", w:"Questões"}
+      ]},
+      { t:"15h40", h:"Conferência de encerramento", m:"Mediação: Prof. Dr. João Evangelista Tude de Melo Neto (UFRPE/UFPE/GEN) e Profa. Dra. Martha Solange Perrusi (UNICAP/GEN)", items:[
+        {t:"15h40", w:"Scarlett Marton", a:"USP/GEN"},
+        {t:"16h", w:"Questões"}
+      ]},
+      { t:"16h40", h:"Lançamentos — Livraria Vozes", m:"R. do Príncipe, 482 — Santo Amaro, Recife.", items:[
+        {w:"João Evangelista Tude de Melo Neto", ti:"<i>Nietzsche: o último discípulo do filósofo Dioniso</i> (Ideias &amp; Letras)"},
+        {w:"Scarlett Marton", ti:"<i>Nietzsche e a obra por fazer: Zaratustra</i> (Autêntica)"},
+        {w:"Friedrich Nietzsche", ti:"<i>Assim falava Zaratustra</i> — trad. Fernando R. de Moraes Barros, revisão técnica de Scarlett Marton (Autêntica)"},
+        {w:"Martha Solange Perrusi", ti:"<i>Filosofia como retórica: uma leitura de Nietzsche</i> (CRV)"},
+        {w:"Vânia Dutra de Azeredo", ti:"<i>Nietzsche e a Condição Pós-Moderna. A Extemporaneidade de Um Discurso</i> (CRV)"}
+      ]}
+    ]}
+  ]
+};
+
+/* ── Toledo ────────────────────────────────────────────────── */
+const TOL = {
+  slug:"toledo", nome:"Toledo", uf:"PR",
+  datas:"2 de outubro", datasCurto:"02/10",
+  local:"UNIOESTE — Auditório A3, Campus Toledo",
+  endereco:"Toledo — Paraná",
+  inicio:"Início às 8h",
+  realizacao:"UNIOESTE · PPGFil",
+  cartaz:"cartaz-toledo",
+  links:[],
+  cartazes:[["prog-toledo-02-10","Programação · 02/10"]],
+  dias:[
+    { id:"tol-02", titulo:"2 de outubro", st:"Início às 8h", sects:[
+      { t:"8h", h:"Mesa 1 — Nietzsche e os gregos", items:[
+        {t:"8h", w:"João Evangelista Tude de Melo Neto", a:"UFRPE", ti:"Nietzsche à luz dos antigos."},
+        {t:"8h25", w:"Cassiano Lucas Silva Carvalho", a:"UNIOESTE", ti:"A recepção nietzschiana de Empédocles na construção da noção de vontade de potência."},
+        {t:"8h50", w:"Stefano Busellato", a:"UNILA", ti:"As lições sobre os pré-platônicos de Nietzsche."},
+        {t:"9h15", w:"Debate"}
+      ]},
+      { t:"9h45", h:"Intervalo", plain:true, brk:true },
+      { t:"10h", h:"Mesa 2 — Genealogia e Fisiopsicologia", items:[
+        {t:"10h", w:"Osni Carlos de Souza Gali", a:"UEM", ti:"Por uma genealogia do “senso de justiça”: críticas de Nietzsche a Paul Rée."},
+        {t:"10h25", w:"Leonardo Alves Fernandes", a:"UNESP/Assis", ti:"O problema da autoanálise nas vivências nietzschianas segundo a interpretação de Lou Andreas-Salomé."},
+        {t:"10h50", w:"Kelly de Fátima Castilho", a:"IFFAR/Santo Ângelo-RS", ti:"Nietzsche e a crítica ao altruísmo na obra <i>Aurora</i>."},
+        {t:"11h15", w:"Debate"}
+      ]},
+      { t:"14h", h:"Mesa 3 — Zaratustra I", items:[
+        {t:"14h", w:"Leonardo Augusto Catafesta", a:"UNIOESTE", ti:"Por que Zaratustra, referido como sem-deus, abre a possibilidade da crença em um deus que soubesse dançar?"},
+        {t:"14h25", w:"Paulo Sérgio Alves de Souza Filho", a:"UFPE", ti:"Da avaliação à criação de valores: uma leitura de “Das mil e uma metas” e “Das velhas e novas tábuas” em <i>Assim falou Zaratustra</i>."},
+        {t:"14h50", w:"Eder Corbanezi", a:"UNESP/Franca e Marília", ti:"Universalidade e relatividade dos valores em <i>Assim falava Zaratustra</i>."},
+        {t:"15h15", w:"Debate"}
+      ]},
+      { t:"16h", h:"Mesa 4 — Tragédia / Linguagem / Zaratustra II", items:[
+        {t:"16h", w:"Márcio José Silveira Lima", a:"UFSB", ti:"“O drama musical grego”: além de um texto preparatório."},
+        {t:"16h25", w:"Célia Benvenho", a:"UNIOESTE", ti:"“As palavras estão em nosso caminho”: linguagem, moral e invenção em <i>Aurora</i>."},
+        {t:"16h50", w:"Alexander Gonçalves", a:"UENP/UEM", ti:"Superação do humano e soberania em <i>Assim falava Zaratustra</i>."},
+        {t:"17h15", w:"Wilson Antonio Frezzatti Jr.", a:"UNIOESTE", ti:"Aspectos científicos da noção de eterno retorno do mesmo."},
+        {t:"17h40", w:"Debate"}
+      ]},
+      { t:"19h", h:"Lançamentos", items:[
+        {w:"João Evangelista Tude de Melo Neto", ti:"<i>Nietzsche: o último discípulo do filósofo Dioniso</i> (Ideias &amp; Letras)"},
+        {w:"Scarlett Marton", ti:"<i>Nietzsche e a obra por fazer: Zaratustra</i> (Autêntica)"},
+        {w:"Friedrich Nietzsche", ti:"<i>Assim falava Zaratustra</i> — trad. Fernando R. de Moraes Barros, revisão técnica de Scarlett Marton (Autêntica)"},
+        {w:"Friedrich Nietzsche", ti:"<i>Lições sobre os pré-platônicos</i> — trad. Anna Maria Lorenzoni e Stefano Busellato (Vozes)"},
+        {w:"Célia Machado Benvenho", ti:"<i>Linguagem e Retórica na filosofia do jovem Nietzsche</i> (Eduel)"}
+      ]},
+      { t:"19h30", h:"Conferências de encerramento", items:[
+        {w:"Fernando Ribeiro de Moraes Barros", a:"UnB", ti:"Grande meio-dia das imagens-sentido: os desafios em traduzir <i>Assim falava Zaratustra</i>."},
+        {w:"Scarlett Marton", a:"USP", ti:"Zaratustra: do fracasso pedagógico ao aprendizado por vivência."}
+      ]},
+      { t:"22h", h:"Encerramento", plain:true, brk:true }
+    ]}
+  ]
+};
+
+const CIDADES = [SP, RJ, BSB, REC, TOL];
+
+/* ── lançamentos ───────────────────────────────────────────── */
+const LIVROS = [
+  { img:"assets/livros/dioniso.jpg",
+    t:"Nietzsche: o último discípulo do filósofo Dioniso",
+    by:"João Evangelista Tude de Melo Neto", ed:"Ideias &amp; Letras",
+    p:["Em plena Idade Média, ainda era possível testemunhar manifestações públicas de exaltação ao deus da embriaguez entre camponeses que trabalhavam na produção de vinho em regiões do Império Bizantino. Durante o processo da “pisa da uva”, por exemplo, eles preservaram a tradição de gritar o nome da divindade: “– Dioniso!”. Em represália a esta prática, o Concílio de Trullo – realizado em Constantinopla, entre 691 e 692 d.C. – determinou a proibição da reverência ao deus pagão. Entre os 102 cânones que compõem a ata do referido concílio, o cânon 62 advertia que estas e outras práticas ligadas à cultura dionisíaca deveriam ser completamente extirpadas “do modo de vida dos fiéis”.",
+       "As interdições às práticas dionisíacas formalizadas pelo cânon cristão nos remetem, de chofre, ao embate a que Nietzsche faz referência no final de sua autobiografia, o <i>Ecce Homo</i>: “– Fui compreendido? – Dioniso contra o Crucificado”. Ora, o que o autor, de fato, tinha em mente ao se referir à oposição entre Dioniso e o Crucificado? No livro que agora vem a lume, tentamos oferecer uma interpretação acerca da concepção nietzschiana de filosofia dionisíaca por meio da elucidação de suas relações com a religiosidade dionisíaca dos gregos antigos."]
+  },
+  { img:"assets/livros/obra-por-fazer.jpg",
+    t:"Nietzsche e a obra por fazer: Zaratustra",
+    by:"Scarlett Marton", ed:"Autêntica",
+    p:["Em <i>Nietzsche e a obra por fazer: Zaratustra</i>, Scarlett Marton investiga como <i>Assim falava Zaratustra</i> reúne os pilares da filosofia nietzschiana madura: a noção de valor e o procedimento genealógico estão lado a lado com o conceito de vontade de potência, a teoria das forças e o pensamento do eterno retorno do mesmo.",
+       "Contrariando interpretações tradicionais, Marton argumenta que o problema central da obra não é o eterno retorno nem a ideia de além-do-homem, mas o projeto de transvaloração de todos os valores, para o qual essas ideias funcionam como elementos decisivos. A autora analisa ainda a composição singular de <i>Zaratustra</i>, suas partes e seus conceitos fundamentais, esclarecendo de que modo cada retomada do texto nietzschiano reforça uma leitura integrada e rigorosa de seu propósito filosófico."]
+  },
+  { img:"assets/livros/assim-falava-zaratustra.jpg",
+    t:"Assim falava Zaratustra",
+    by:"Friedrich Nietzsche — trad. Fernando R. de Moraes Barros, revisão técnica de Scarlett Marton", ed:"Autêntica",
+    p:["Texto clássico de Nietzsche, traduzido por Fernando R. de Moraes Barros, <i>Assim falava Zaratustra</i> acompanha o profeta Zaratustra, que desce da montanha após anos de isolamento para compartilhar com os homens sua nova visão de mundo. Obra de ficção, aborda assuntos que vão do cotidiano ao profundamente filosófico, como metafísica, guerra, perspectivismo e a amoralidade da natureza. O livro conta com revisão técnica e texto introdutório de Scarlett Marton."],
+    q:{ txt:"O mérito da originalidade, dizia Thomas Carlyle, não é a novidade; é a sinceridade. A presente tradução de <i>Assim falava Zaratustra</i> buscou ser sincera em suas escolhas. Sem se furtar ao corpo a corpo com a letra de Nietzsche, resultou de um trabalho técnico-crítico, mas, sem abandonar a tonalidade afetiva, também emergiu de um esforço expressivo, intuitivo inclusive.",
+         by:"Fernando R. de Moraes Barros" }
+  },
+  { img:"assets/livros/pre-platonicos.jpg",
+    t:"Lições sobre os pré-platônicos",
+    by:"Friedrich Nietzsche — trad. Anna Maria Lorenzoni e Stefano Busellato", ed:"Vozes",
+    p:["Antes de Platão, havia uma filosofia em estado bruto, visceral, enraizada no devir do mundo e na tensão entre pensamento e existência. Neste livro, Nietzsche percorre os caminhos traçados por Heráclito, Parmênides, Anaximandro, Empédocles e outros pensadores que desafiaram os limites da linguagem e da razão.",
+       "Ao revisitá-los com olhar agudo e provocador, ele questiona a própria origem da filosofia ocidental e antecipa os embates que marcariam seu pensamento posterior. Uma leitura que ainda hoje desestabiliza certezas e renova o horizonte do pensar filosófico."]
+  },
+  { img:"assets/livros/filosofia-como-retorica.jpg",
+    t:"Filosofia como retórica: uma leitura de Nietzsche",
+    by:"Martha Solange Perrusi", ed:"CRV",
+    p:["Neste belo livro, fruto de uma tese de doutorado, o leitor encontrará não só estudo sobre a linguagem como também sobre a temática da retórica. Com um texto de agradável leitura, bem elaborado e bem estruturado e, sobretudo, bem escrito, Martha oferece um guia de leitura para a filosofia de Nietzsche.",
+       "Parte da premissa que a questão da retórica está presente nas aulas que o filósofo deu quando professor de Filologia da Basileia. Salienta a questão da linguagem como retórica e se pergunta ao dizer que a linguagem é retórica se é possível, para Nietzsche, pensar a filosofia como retórica. Com essa questão fundamental, Martha procura investigar a linguagem retórica e suas relações com filosofia."]
+  },
+  { img:"assets/livros/cadernos-47-2.jpg",
+    t:"Cadernos Nietzsche — vol. 47, n. 2",
+    by:"Revista do GEN", ed:"Lançamento desta edição",
+    p:["Os <i>Cadernos Nietzsche</i> representam uma iniciativa ímpar, que só encontra similar nos <i>Nietzsche-Studien</i> na Alemanha e, mais recentemente, nos <i>Estudios Nietzsche</i> na Espanha. Lançados sempre três vezes ao ano, integram a base SciELO; considerados uma das melhores revistas de filosofia do país, receberam a classificação A1 por parte do Qualis-Periódicos da CAPES.",
+       "Desde a sua fundação, pela professora Scarlett Marton, em 1996, os <i>Cadernos Nietzsche</i> norteiam-se por duas diretrizes básicas: a de trazer ao público brasileiro as mais diferentes leituras do pensamento de Nietzsche, constituindo um espaço de conflito de interpretações, e a de acolher trabalhos de pesquisadores internacionais de renome, estudiosos brasileiros confirmados e pós-graduandos, promovendo um diálogo entre diferentes gerações. Nesta edição será lançado o volume 47, número 2."],
+    link:["Acessar os Cadernos Nietzsche", EVENTO.cadernos]
+  }
+];
+
+const LIVROS_OUTROS = [
+  ["Nietzsche e a Condição Pós-Moderna. A Extemporaneidade de Um Discurso","Vânia Dutra de Azeredo · CRV"],
+  ["Linguagem e Retórica na filosofia do jovem Nietzsche","Célia Machado Benvenho · Eduel"]
+];
+
+/* ═══════════════════════ renderização ═══════════════════════ */
+
+const ROTAS = [
+  ["/","Início"],
+  ["/o-gen","O GEN"],
+  ["/programacao","Programação"],
+  ["/lancamentos","Lançamentos"],
+  ["/cartazes","Cartazes"],
+  ["/contato","Contato"]
+];
+
+const img = (base,alt,cls) =>
+  `<img src="assets/banners/${base}.jpg" alt="${alt}" loading="lazy" data-zoom="assets/banners/${base}-alta.jpg" data-cap="${alt}"${cls?` class="${cls}"`:""}>`;
+
+function phead(kick,title,lede){
+  return `<div class="phead"><div class="label kick">${kick}</div><h2 class="serif">${title}</h2>${lede?`<p class="lede">${lede}</p>`:""}<div class="rule"></div></div>`;
+}
+
+function renderHero(rota){
+  const home = rota==="/";
+  if(!home) return "";
+  return `<div class="hero"><div class="wrap">
+    <img class="mark" src="assets/brand/30-anos-gen-t.png" alt="30 anos do GEN — Grupo de Estudos Nietzsche">
+    <div class="label kick">${EVENTO.edicao}</div>
+    <h1 class="serif">Nietzsche e seus duplos: <em>destruição e criação</em></h1>
+    <p class="sub">Edição comemorativa dos trinta anos do GEN — Grupo de Estudos Nietzsche, realizada em cinco cidades brasileiras.</p>
+    <div class="strip">
+      <div><b>21/09 → 02/10</b> <span class="s">2026</span></div>
+      <div><span class="s">São Paulo · Rio de Janeiro · Brasília · Recife · Toledo</span></div>
+    </div>
+  </div></div>`;
+}
+
+function cityCard(c){
+  return `<a class="ccard" href="#/programacao/${c.slug}">
+    <img src="assets/banners/${c.cartaz}.jpg" alt="Cartaz — ${c.nome}" loading="lazy">
+    <div class="cb">
+      <div class="cn">${c.nome}</div>
+      <div class="cd">${c.datasCurto}</div>
+      <div class="cv">${c.local}</div>
+    </div></a>`;
+}
+
+function renderHome(){
+  return `
+  <figure class="routebox">
+    <img src="assets/brand/andarilho.png" alt="Roteiro do 55º Encontros Nietzsche: São Paulo, Rio de Janeiro, Brasília, Recife e Toledo" style="max-width:820px;width:100%">
+    <figcaption>O andarilho — roteiro da 55ª edição dos Encontros Nietzsche.</figcaption>
+  </figure>
+
+  <div class="prose">${SOBRE.encontros.map(p=>`<p>${p}</p>`).join("")}</div>
+  <div class="btnrow">
+    <a class="btn solid" href="#/programacao">Ver a programação</a>
+    <a class="btn" href="#/lancamentos">Lançamentos</a>
+    <a class="btn ghost" href="${EVENTO.anteriores}">Edições anteriores</a>
+  </div>
+
+  <h3 class="sec serif" style="margin-top:2.4em">As cinco cidades</h3><div class="secrule"></div>
+  <div class="citygrid">${CIDADES.map(cityCard).join("")}</div>
+
+  <h3 class="sec serif" style="margin-top:2.8em">Sobre o GEN</h3><div class="secrule"></div>
+  <div class="prose"><p>${SOBRE.gen[0]}</p></div>
+  <div class="btnrow"><a class="btn ghost" href="#/o-gen">Conhecer o grupo →</a></div>`;
+}
+
+function renderGen(){
+  return phead("Grupo de Estudos Nietzsche","O GEN","Trinta anos de pesquisa sobre a filosofia nietzschiana no Brasil.") + `
+  <div class="prose">${SOBRE.gen.map(p=>`<p>${p}</p>`).join("")}</div>
+
+  <h3 class="sec serif" style="margin-top:2.4em">Núcleos</h3><div class="secrule"></div>
+  <div class="chips">${SOBRE.nucleos.map(n=>`<span class="chip">${n}</span>`).join("")}</div>
+
+  <h3 class="sec serif" style="margin-top:2.6em">Os Encontros Nietzsche</h3><div class="secrule"></div>
+  <div class="prose">${SOBRE.encontros.map(p=>`<p>${p}</p>`).join("")}</div>
+  <div class="btnrow">
+    <a class="btn" href="${EVENTO.anteriores}">Edições anteriores</a>
+    <a class="btn ghost" href="${EVENTO.cadernos}">Cadernos Nietzsche</a>
+    <a class="btn ghost" href="${EVENTO.sitePrincipal}">Site do GEN</a>
+  </div>`;
+}
+
+function sect(s){
+  const cls = "sect" + (s.plain?" plain":"") + (s.brk?" break":"");
+  let body = `<div class="stitle">${s.h}</div>`;
+  if(s.m) body += `<p class="smeta">${s.m}</p>`;
+  if(s.names) body += `<p class="names">${s.names}</p>`;
+  if(s.items) body += `<ul class="items">${s.items.map(i=>`
+    <li class="item${(!i.ti && !i.a)?" bare":""}">
+      ${i.t?`<span class="t">${i.t}</span>`:""}
+      <span class="w">${i.w}</span>${i.a?` <span class="a">(${i.a})</span>`:""}
+      ${i.ti?`<div class="ti">${i.ti}</div>`:""}
+    </li>`).join("")}</ul>`;
+  return `<div class="${cls}"><div class="sgrid"><div class="stime">${s.t||""}</div><div>${body}</div></div></div>`;
+}
+
+function dia(d){
+  return `<section class="day" id="${d.id}">
+    <div class="dayhead"><h4 class="serif">${d.titulo}</h4><span class="st">${d.st}</span></div>
+    <div class="dayrule"></div>
+    ${d.sects.map(sect).join("")}
+  </section>`;
+}
+
+function renderCidade(c){
+  const tabs = CIDADES.map(x=>`<a class="tab${x.slug===c.slug?" on":""}" href="#/programacao/${x.slug}">${x.nome} <span style="opacity:.7">· ${x.datasCurto}</span></a>`).join("");
+  return phead("Programação", `${c.nome} <span class="muted" style="font-weight:400">· ${c.datasCurto}</span>`, EVENTO.tema) + `
+  <div class="tabs">${tabs}</div>
+  <div class="cityhead">
+    <figure class="poster" style="margin:0">${img(c.cartaz,`Cartaz — ${c.nome}`)}</figure>
+    <div>
+      <ul class="facts">
+        <li><span class="k">Datas</span><span>${c.datas} de 2026</span></li>
+        <li><span class="k">Local</span><span>${c.local}</span></li>
+        <li><span class="k">Endereço</span><span>${c.endereco}</span></li>
+        <li><span class="k">Horário</span><span>${c.inicio}</span></li>
+        <li><span class="k">Realização</span><span>${c.realizacao}</span></li>
+      </ul>
+      ${c.links.length||c.qr?`<div class="btnrow">${c.links.map(([n,u])=>`<a class="btn" href="${u}">${n}</a>`).join("")}</div>`:""}
+      ${c.qr?`<div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:6px">
+        <div class="qr"><img src="${c.qr.img}" alt="${c.qr.t}"></div>
+        <div style="max-width:24ch"><div class="label" style="color:var(--sepia);margin-bottom:4px">Ouvintes</div><div class="muted" style="font-size:.88rem">${c.qr.t}. Aponte a câmera para o código.</div></div>
+      </div>`:""}
+    </div>
+  </div>
+
+  <h3 class="sec serif">Cartazes da programação</h3><div class="secrule"></div>
+  <div class="postergrid">${c.cartazes.map(([f,l])=>`
+    <figure class="pcard" style="margin:0">
+      ${img(f,l)}
+      <div class="pb"><span class="pl">${l}</span><a class="dl" href="assets/banners/${f}-alta.jpg" download>Alta ↓</a></div>
+    </figure>`).join("")}</div>
+
+  <h3 class="sec serif">Programação completa</h3><div class="secrule"></div>
+  ${c.dias.map(dia).join("")}`;
+}
+
+function renderPrograma(){
+  return phead("55º Encontros Nietzsche","Programação","Escolha uma cidade para ver os cartazes e a programação completa.") + `
+  <div class="citygrid">${CIDADES.map(cityCard).join("")}</div>
+  <div class="note" style="margin-top:2em">Os títulos das conferências e comunicações são apresentados no idioma original. A programação pode sofrer alterações — confira sempre os cartazes mais recentes.</div>`;
+}
+
+function renderLivros(){
+  return phead("Sendas &amp; Veredas · Cadernos Nietzsche","Lançamentos","Os livros e o número dos Cadernos Nietzsche lançados ao longo da 55ª edição dos Encontros.") + `
+  ${LIVROS.map(b=>`
+    <article class="book">
+      <figure class="cover" style="margin:0"><img src="${b.img}" alt="Capa — ${b.t}" loading="lazy" data-zoom="${b.img}" data-cap="${b.t}"></figure>
+      <div>
+        <h4 class="serif">${b.t}</h4>
+        <div class="by">${b.by}</div>
+        <div class="pub">${b.ed}</div>
+        ${b.p.map(p=>`<p>${p}</p>`).join("")}
+        ${b.q?`<blockquote>“${b.q.txt}”<cite>${b.q.by}</cite></blockquote>`:""}
+        ${b.link?`<div class="btnrow" style="margin-bottom:0"><a class="btn ghost" href="${b.link[1]}">${b.link[0]}</a></div>`:""}
+      </div>
+    </article>`).join("")}
+
+  <h3 class="sec serif" style="margin-top:2.6em">Também em lançamento</h3><div class="secrule"></div>
+  <p class="muted" style="font-size:.9rem;max-width:60ch">Títulos confirmados na programação; informações complementares serão acrescentadas.</p>
+  <ul class="simple">${LIVROS_OUTROS.map(([t,s])=>`<li><i>${t}</i><span>${s}</span></li>`).join("")}</ul>`;
+}
+
+function renderCartazes(){
+  const todos = [["cartaz-geral","Cartaz geral — as cinco cidades"]]
+    .concat(CIDADES.map(c=>[c.cartaz,`Cartaz — ${c.nome} · ${c.datasCurto}`]))
+    .concat(CIDADES.flatMap(c=>c.cartazes.map(([f,l])=>[f,`${c.nome} — ${l}`])));
+  return phead("Materiais","Cartazes","Todas as artes da 55ª edição. Clique para ampliar ou baixe a versão em alta resolução.") + `
+  <div class="postergrid">${todos.map(([f,l])=>`
+    <figure class="pcard" style="margin:0">
+      ${img(f,l)}
+      <div class="pb"><span class="pl">${l}</span><a class="dl" href="assets/banners/${f}-alta.jpg" download>Alta ↓</a></div>
+    </figure>`).join("")}</div>
+
+  <h3 class="sec serif" style="margin-top:1.6em">Outras artes</h3><div class="secrule"></div>
+  <div class="citygrid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))">
+    <figure class="pcard" style="margin:0"><img src="assets/brand/andarilho.png" alt="O andarilho — roteiro" data-zoom="assets/brand/andarilho.png" data-cap="O andarilho — roteiro" style="cursor:zoom-in;background:#fff">
+      <div class="pb"><span class="pl">O andarilho</span><a class="dl" href="assets/brand/andarilho.png" download>Baixar ↓</a></div></figure>
+    <figure class="pcard" style="margin:0"><img src="assets/brand/qr-ouvintes-sp.png" alt="QR — inscrições de ouvintes em São Paulo" data-zoom="assets/brand/qr-ouvintes-sp.png" data-cap="Inscrições para ouvintes — São Paulo" style="cursor:zoom-in;background:#fff">
+      <div class="pb"><span class="pl">Ouvintes · SP</span><a class="dl" href="assets/brand/qr-ouvintes-sp.png" download>Baixar ↓</a></div></figure>
+    <figure class="pcard" style="margin:0"><img src="assets/brand/gen-brasil-t.png" alt="Assinatura GEN Brasil" data-zoom="assets/brand/gen-brasil-t.png" data-cap="GEN — Grupo de Estudos Nietzsche Brasil" style="cursor:zoom-in;background:#fff">
+      <div class="pb"><span class="pl">Assinatura GEN</span><a class="dl" href="assets/brand/gen-brasil-t.png" download>Baixar ↓</a></div></figure>
+  </div>`;
+}
+
+function renderContato(){
+  return phead("Informações","Contato e locais","Cada sede é organizada pelo núcleo local do GEN em parceria com a universidade anfitriã.") + `
+  <div class="cols2">
+    <div class="card">
+      <div class="label">Na internet</div>
+      <p><a href="${EVENTO.sitePrincipal}">gen-grupodeestudosnietzsche.net</a></p>
+      <p><a href="${EVENTO.anteriores}">Encontros Nietzsche — edições anteriores</a></p>
+      <p><a href="${EVENTO.cadernos}">Cadernos Nietzsche</a></p>
+      <p><a href="${EVENTO.uspEvento}">55º Encontros na FFLCH/USP</a></p>
+    </div>
+    <div class="card">
+      <div class="label">Inscrições</div>
+      <p>Em São Paulo, ouvintes podem se inscrever pelo QR code disponível na <a href="#/programacao/sao-paulo">página de São Paulo</a>.</p>
+      <p class="muted" style="font-size:.88rem;margin-top:.7em">Para as demais sedes, procure o núcleo local do GEN na universidade anfitriã.</p>
+    </div>
+  </div>
+
+  <h3 class="sec serif" style="margin-top:2.6em">Locais de realização</h3><div class="secrule"></div>
+  <ul class="simple">${CIDADES.map(c=>`<li><b>${c.nome}</b> · ${c.datasCurto}<span>${c.local} — ${c.endereco}</span></li>`).join("")}</ul>`;
+}
+
+/* ═══════════════════════ roteamento ═══════════════════════ */
+
+function resolve(){
+  const h = (location.hash.replace(/^#/,"") || "/").replace(/\/$/,"") || "/";
+  const m = h.match(/^\/programacao\/([a-z-]+)$/);
+  if(m){
+    const c = CIDADES.find(x=>x.slug===m[1]);
+    if(c) return {rota:"/programacao", cidade:c};
+    return {rota:"/programacao"};
+  }
+  return { rota: ROTAS.some(([r])=>r===h) ? h : "/" };
+}
+
+const PAGINAS = {
+  "/":renderHome,
+  "/o-gen":renderGen,
+  "/programacao":renderPrograma,
+  "/lancamentos":renderLivros,
+  "/cartazes":renderCartazes,
+  "/contato":renderContato
+};
+
+function renderFoot(){
+  return `<div class="fg">
+    <div>
+      <div class="sig"><img src="assets/brand/gen-brasil-t.png" alt="GEN — Grupo de Estudos Nietzsche Brasil"></div>
+      <p style="margin:0">${EVENTO.edicao} · <i>${EVENTO.tema}</i></p>
+      <p style="margin:.3em 0 0">${EVENTO.marco} · ${EVENTO.periodo}</p>
+    </div>
+    <div>
+      <span class="label">Navegar</span>
+      <ul>${ROTAS.map(([r,n])=>`<li><a href="#${r}">${n}</a></li>`).join("")}</ul>
+    </div>
+    <div>
+      <span class="label">Sedes</span>
+      <ul>${CIDADES.map(c=>`<li><a href="#/programacao/${c.slug}">${c.nome} · ${c.datasCurto}</a></li>`).join("")}</ul>
+    </div>
+  </div>
+  <div class="cred">Conteúdo e artes pertencem ao GEN — Grupo de Estudos Nietzsche e às instituições parceiras: USP · UNIFESP · UNIRIO · UnB · UNICAP · UFPE · UFRPE · UNIOESTE.</div>`;
+}
+
+function render(){
+  const {rota, cidade} = resolve();
+  document.getElementById("nav").innerHTML = ROTAS.map(([r,n])=>
+    `<a href="#${r}" class="${r===rota?'on':''}">${n}</a>`).join("");
+  document.getElementById("hero").innerHTML = renderHero(rota);
+  document.getElementById("app").innerHTML = cidade ? renderCidade(cidade) : PAGINAS[rota]();
+  document.getElementById("foot").innerHTML = renderFoot();
+  document.querySelectorAll('a[href]').forEach(a=>{
+    const h=a.getAttribute("href")||"";
+    if(/^https?:/.test(h)){ a.target="_blank"; a.rel="noopener"; }
+  });
+  const t = cidade ? `${cidade.nome} · ` : (rota==="/" ? "" : `${(ROTAS.find(([r])=>r===rota)||[,""])[1]} · `);
+  document.title = `${t}30 anos do GEN · 55º Encontros Nietzsche`;
+}
+
+/* ── lightbox ─────────────────────────────── */
+const lb=document.getElementById("lb"), lbimg=document.getElementById("lbimg"), lbcap=document.getElementById("lbcap");
+function closeLb(){ lb.classList.remove("on"); lbimg.src=""; document.body.style.overflow=""; }
+document.getElementById("lbclose").addEventListener("click", closeLb);
+lb.addEventListener("click", e=>{ if(e.target===lb) closeLb(); });
+document.addEventListener("keydown", e=>{ if(e.key==="Escape" && lb.classList.contains("on")) closeLb(); });
+document.addEventListener("click", e=>{
+  const z=e.target.closest("[data-zoom]");
+  if(!z) return;
+  lbimg.src=z.dataset.zoom; lbimg.alt=z.alt||"";
+  lbcap.textContent=z.dataset.cap||"";
+  lb.classList.add("on"); document.body.style.overflow="hidden";
+});
+
+/* ── tema ─────────────────────────────────── */
+const savedTheme = localStorage.getItem("gen-theme");
+if(savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
+document.getElementById("theme").addEventListener("click", ()=>{
+  const cur = document.documentElement.getAttribute("data-theme");
+  const dark = cur ? cur==="dark"
+    : matchMedia("(prefers-color-scheme: dark)").matches;
+  const next = dark ? "light" : "dark";
+  document.documentElement.setAttribute("data-theme", next);
+  localStorage.setItem("gen-theme", next);
+});
+
+window.addEventListener("hashchange", ()=>{ render(); window.scrollTo({top:0}); });
+render();
+</script>
+
+</body>
+</html>
