@@ -77,3 +77,19 @@ Cada dia tem `sects` (blocos). Um bloco aceita:
 - **Recife, 29/09:** o cartaz traz "19h55", "19h35" e "19h55" na Mesa 4. Foi transcrito
   como 19h15 / 19h35 / 19h55 (sequência coerente com as Questões às 20h15) —
   confirmar com a organização.
+- **Links de editora:** faltam os de *Lições sobre os pré-platônicos* (Vozes) e
+  *Filosofia como retórica* (CRV). Os links recebidos apontavam para a caixa
+  Zaratustra da Autêntica, que não é dessas editoras, então o botão não foi
+  aplicado nesses dois livros.
+- **Rio, 25/09:** "Cartografias nietzschianas em Butler (GEN/UNIRIO)" foi transcrito
+  do documento de alterações tal como veio — confirmar se é o nome de quem apresenta
+  ou o título do trabalho.
+
+## Histórico de alterações
+
+**22/09/2026** — aplicadas as correções do documento `Alterações no site.docx`:
+título da conferência de Vânia Dutra de Azeredo em São Paulo (21/09); salas distintas
+por dia no Rio (Tércio Pacitti em 24/09, Sala 401 do CLA em 25/09); bloco das 9h30 do
+dia 25/09 passou de "Conferências" para "Comunicações", com nova apresentação e link
+da sala online. Na página de Lançamentos: botão "Página na editora" e reordenação
+com o livro de Scarlett Marton em primeiro.

@@ -142,6 +142,7 @@
   .dayhead{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin:0 0 4px}
   .dayhead h4{font-weight:600; font-size:clamp(1.2rem,2.6vw,1.6rem); margin:0}
   .dayhead .st{color:var(--accent-ink); font-size:.78rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase}
+  .dayhead .sala{color:var(--muted); font-size:.82rem; border-left:1px solid var(--line); padding-left:12px}
   .dayrule{height:3px; border-top:2px solid var(--ink); border-bottom:1px solid var(--line); margin:0 0 4px}
   .sect{border-bottom:1px solid var(--line-soft); padding:16px 0}
   .sect:last-child{border-bottom:0}
@@ -303,7 +304,7 @@ const SP = {
     { id:"sp-21", titulo:"21 de setembro", st:"Início às 14h", sects:[
       { t:"14h", h:"Abertura", names:"<b>Eduardo Brandão</b> (USP) · <b>Vânia Dutra de Azeredo</b> (GEN/UNIRIO) · <b>Eder Corbanezi</b> (GEN/UNESP)" },
       { t:"14h15", h:"Conferências", items:[
-        {w:"Vânia Dutra de Azeredo", a:"GEN/UNIRIO", ti:"A leitura como canto paralelo."},
+        {w:"Vânia Dutra de Azeredo", a:"GEN/UNIRIO", ti:"Entre o silêncio e a palavra: a questão do estilo em Nietzsche."},
         {w:"André Luís Mota Itaparica", a:"GEN/UFRB", ti:"Nietzsche ou MacIntyre?"},
         {w:"Damião Duque de Farias", a:"UFGD", ti:"Senso/sentido histórico: a crítica de Nietzsche à historiografia do século XIX."},
         {w:"Eduardo Nasser", a:"GEN/UFPE/UFABC", ti:"Linguística e literatura comparada: diferentes imagens da dimensão pulsional em Nietzsche."}
@@ -382,15 +383,15 @@ const SP = {
 const RJ = {
   slug:"rio-de-janeiro", nome:"Rio de Janeiro", uf:"RJ",
   datas:"24 e 25 de setembro", datasCurto:"24–25/09",
-  local:"UNIRIO — Auditório Tércio Pacitti",
-  endereco:"Av. Pasteur, 458, prédio do CCET — Urca, Rio de Janeiro",
-  inicio:"24/09 às 15h30 · 25/09 às 9h",
+  local:"UNIRIO — Auditório Tércio Pacitti (24/09) e Sala 401 do CLA (25/09)",
+  endereco:"Av. Pasteur, 458 — Urca, Rio de Janeiro",
+  inicio:"24/09 às 15h30 · 25/09 às 9h30",
   realizacao:"UNIRIO · UNIFESP",
   cartaz:"cartaz-rio-de-janeiro",
   links:[],
   cartazes:[["prog-rio-24-09","Programação · 24/09"],["prog-rio-25-09","Programação · 25/09"]],
   dias:[
-    { id:"rj-24", titulo:"24 de setembro", st:"Início às 15h30", sects:[
+    { id:"rj-24", titulo:"24 de setembro", st:"Início às 15h30", sala:"Auditório Tércio Pacitti — prédio do CCET", sects:[
       { t:"15h30", h:"Mesa de abertura", names:"<b>Nilton dos Anjos</b> (UNIRIO) · <b>Vânia Dutra de Azeredo</b> (GEN/UNIRIO) · <b>Eder Corbanezi</b> (GEN/UNESP)" },
       { t:"16h", h:"Conferências", m:"Mediação: Vânia Dutra de Azeredo", items:[
         {w:"Blaise Benoit", a:"GEN/Université de Nantes", ti:"Nietzsche: penseur de la justice?"},
@@ -402,15 +403,15 @@ const RJ = {
         {w:"Scarlett Marton", a:"GEN/USP", ti:"“Todo vir-a-ser quer comigo aprender a falar”. A nova linguagem de Zaratustra."}
       ]}
     ]},
-    { id:"rj-25", titulo:"25 de setembro", st:"Início às 9h", sects:[
-      { t:"9h", h:"Conferências", m:"Mediação: Caio Picarelli", items:[
+    { id:"rj-25", titulo:"25 de setembro", st:"Início às 9h30", sala:"Sala 401 do CLA", sects:[
+      { t:"9h30", h:"Comunicações", m:"Mediação: Caio Picarelli", items:[
         {w:"Marcelo José das Neves", a:"IAB/UFF", ti:"Animal Capaz de Prometer: Genealogia, Direito e Justiça em Nietzsche."},
         {w:"Gabriela Marchiori", a:"GEN/UNIFESP", ti:"O espírito livre e a doutrina da completa irresponsabilidade."}
       ]},
-      { t:"", h:"Conferências", m:"Mediação: Gabriela Marchiori", items:[
+      { t:"", h:"Comunicações", m:"Mediação: Gabriela Marchiori", items:[
         {w:"Caio Picarelli", a:"GEN/UNIRIO", ti:"O dionisíaco em Nietzsche como pulsão de vida e criação em Dança."},
-        {w:"Wagner Reis", a:"GEN/UNIRIO", ti:"A crítica de Nietzsche à moral da compaixão em <i>Genealogia da moral</i>."}
-      ]},
+        {w:"Cartografias nietzschianas em Butler", a:"GEN/UNIRIO", ti:"Articulação entre Butler e Nietzsche: uma aliança contra a metafísica da substância."}
+      ], extra:'<a class="btn ghost" style="margin-top:12px" href="https://webconf.ufpel.edu.br/b/lui-2ej-t4e">Sala online ↗</a>' },
       { t:"14h30", h:"Conferências", m:"Mediação: Eder Corbanezi", items:[
         {w:"Vânia Dutra de Azeredo", a:"GEN/UNIRIO", ti:"A tradução como transcriação em Haroldo de Campos."},
         {w:"Fernando R. de Moraes Barros", a:"GEN/UnB", ti:"A tradução de <i>Assim falava Zaratustra</i>."},
@@ -591,24 +592,27 @@ const CIDADES = [SP, RJ, BSB, REC, TOL];
 
 /* ── lançamentos ───────────────────────────────────────────── */
 const LIVROS = [
-  { img:"assets/livros/dioniso.jpg",
-    t:"Nietzsche: o último discípulo do filósofo Dioniso",
-    by:"João Evangelista Tude de Melo Neto", ed:"Ideias &amp; Letras",
-    p:["Em plena Idade Média, ainda era possível testemunhar manifestações públicas de exaltação ao deus da embriaguez entre camponeses que trabalhavam na produção de vinho em regiões do Império Bizantino. Durante o processo da “pisa da uva”, por exemplo, eles preservaram a tradição de gritar o nome da divindade: “– Dioniso!”. Em represália a esta prática, o Concílio de Trullo – realizado em Constantinopla, entre 691 e 692 d.C. – determinou a proibição da reverência ao deus pagão. Entre os 102 cânones que compõem a ata do referido concílio, o cânon 62 advertia que estas e outras práticas ligadas à cultura dionisíaca deveriam ser completamente extirpadas “do modo de vida dos fiéis”.",
-       "As interdições às práticas dionisíacas formalizadas pelo cânon cristão nos remetem, de chofre, ao embate a que Nietzsche faz referência no final de sua autobiografia, o <i>Ecce Homo</i>: “– Fui compreendido? – Dioniso contra o Crucificado”. Ora, o que o autor, de fato, tinha em mente ao se referir à oposição entre Dioniso e o Crucificado? No livro que agora vem a lume, tentamos oferecer uma interpretação acerca da concepção nietzschiana de filosofia dionisíaca por meio da elucidação de suas relações com a religiosidade dionisíaca dos gregos antigos."]
-  },
   { img:"assets/livros/obra-por-fazer.jpg",
     t:"Nietzsche e a obra por fazer: Zaratustra",
     by:"Scarlett Marton", ed:"Autêntica",
     p:["Em <i>Nietzsche e a obra por fazer: Zaratustra</i>, Scarlett Marton investiga como <i>Assim falava Zaratustra</i> reúne os pilares da filosofia nietzschiana madura: a noção de valor e o procedimento genealógico estão lado a lado com o conceito de vontade de potência, a teoria das forças e o pensamento do eterno retorno do mesmo.",
-       "Contrariando interpretações tradicionais, Marton argumenta que o problema central da obra não é o eterno retorno nem a ideia de além-do-homem, mas o projeto de transvaloração de todos os valores, para o qual essas ideias funcionam como elementos decisivos. A autora analisa ainda a composição singular de <i>Zaratustra</i>, suas partes e seus conceitos fundamentais, esclarecendo de que modo cada retomada do texto nietzschiano reforça uma leitura integrada e rigorosa de seu propósito filosófico."]
+       "Contrariando interpretações tradicionais, Marton argumenta que o problema central da obra não é o eterno retorno nem a ideia de além-do-homem, mas o projeto de transvaloração de todos os valores, para o qual essas ideias funcionam como elementos decisivos. A autora analisa ainda a composição singular de <i>Zaratustra</i>, suas partes e seus conceitos fundamentais, esclarecendo de que modo cada retomada do texto nietzschiano reforça uma leitura integrada e rigorosa de seu propósito filosófico."],
+    link:["Página na editora ↗","https://www.grupoautentica.com.br/produto/caixa-zaratustra-2-volumes-assim-falava-zaratustra-e-nietzsche-e-a-obra-por-fazer-zaratustra-1893"]
+  },
+  { img:"assets/livros/dioniso.jpg",
+    t:"Nietzsche: o último discípulo do filósofo Dioniso",
+    by:"João Evangelista Tude de Melo Neto", ed:"Ideias &amp; Letras",
+    p:["Em plena Idade Média, ainda era possível testemunhar manifestações públicas de exaltação ao deus da embriaguez entre camponeses que trabalhavam na produção de vinho em regiões do Império Bizantino. Durante o processo da “pisa da uva”, por exemplo, eles preservaram a tradição de gritar o nome da divindade: “– Dioniso!”. Em represália a esta prática, o Concílio de Trullo – realizado em Constantinopla, entre 691 e 692 d.C. – determinou a proibição da reverência ao deus pagão. Entre os 102 cânones que compõem a ata do referido concílio, o cânon 62 advertia que estas e outras práticas ligadas à cultura dionisíaca deveriam ser completamente extirpadas “do modo de vida dos fiéis”.",
+       "As interdições às práticas dionisíacas formalizadas pelo cânon cristão nos remetem, de chofre, ao embate a que Nietzsche faz referência no final de sua autobiografia, o <i>Ecce Homo</i>: “– Fui compreendido? – Dioniso contra o Crucificado”. Ora, o que o autor, de fato, tinha em mente ao se referir à oposição entre Dioniso e o Crucificado? No livro que agora vem a lume, tentamos oferecer uma interpretação acerca da concepção nietzschiana de filosofia dionisíaca por meio da elucidação de suas relações com a religiosidade dionisíaca dos gregos antigos."],
+    link:["Página na editora ↗","https://www.editoraideiaseletras.com.br/livros/filosofia/nietzsche-o-ultimo-discipulo-do-filosofo-dioniso"]
   },
   { img:"assets/livros/assim-falava-zaratustra.jpg",
     t:"Assim falava Zaratustra",
     by:"Friedrich Nietzsche — trad. Fernando R. de Moraes Barros, revisão técnica de Scarlett Marton", ed:"Autêntica",
     p:["Texto clássico de Nietzsche, traduzido por Fernando R. de Moraes Barros, <i>Assim falava Zaratustra</i> acompanha o profeta Zaratustra, que desce da montanha após anos de isolamento para compartilhar com os homens sua nova visão de mundo. Obra de ficção, aborda assuntos que vão do cotidiano ao profundamente filosófico, como metafísica, guerra, perspectivismo e a amoralidade da natureza. O livro conta com revisão técnica e texto introdutório de Scarlett Marton."],
     q:{ txt:"O mérito da originalidade, dizia Thomas Carlyle, não é a novidade; é a sinceridade. A presente tradução de <i>Assim falava Zaratustra</i> buscou ser sincera em suas escolhas. Sem se furtar ao corpo a corpo com a letra de Nietzsche, resultou de um trabalho técnico-crítico, mas, sem abandonar a tonalidade afetiva, também emergiu de um esforço expressivo, intuitivo inclusive.",
-         by:"Fernando R. de Moraes Barros" }
+         by:"Fernando R. de Moraes Barros" },
+    link:["Página na editora ↗","https://www.grupoautentica.com.br/produto/caixa-zaratustra-2-volumes-assim-falava-zaratustra-e-nietzsche-e-a-obra-por-fazer-zaratustra-1893"]
   },
   { img:"assets/livros/pre-platonicos.jpg",
     t:"Lições sobre os pré-platônicos",
@@ -728,12 +732,13 @@ function sect(s){
       <span class="w">${i.w}</span>${i.a?` <span class="a">(${i.a})</span>`:""}
       ${i.ti?`<div class="ti">${i.ti}</div>`:""}
     </li>`).join("")}</ul>`;
+  if(s.extra) body += s.extra;
   return `<div class="${cls}"><div class="sgrid"><div class="stime">${s.t||""}</div><div>${body}</div></div></div>`;
 }
 
 function dia(d){
   return `<section class="day" id="${d.id}">
-    <div class="dayhead"><h4 class="serif">${d.titulo}</h4><span class="st">${d.st}</span></div>
+    <div class="dayhead"><h4 class="serif">${d.titulo}</h4><span class="st">${d.st}</span>${d.sala?`<span class="sala">${d.sala}</span>`:""}</div>
     <div class="dayrule"></div>
     ${d.sects.map(sect).join("")}
   </section>`;
@@ -789,7 +794,7 @@ function renderLivros(){
         <div class="pub">${b.ed}</div>
         ${b.p.map(p=>`<p>${p}</p>`).join("")}
         ${b.q?`<blockquote>“${b.q.txt}”<cite>${b.q.by}</cite></blockquote>`:""}
-        ${b.link?`<div class="btnrow" style="margin-bottom:0"><a class="btn ghost" href="${b.link[1]}">${b.link[0]}</a></div>`:""}
+        ${b.link?`<div class="btnrow" style="margin-bottom:0"><a class="btn" href="${b.link[1]}">${b.link[0]}</a></div>`:""}
       </div>
     </article>`).join("")}
 
